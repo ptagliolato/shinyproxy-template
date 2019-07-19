@@ -44,12 +44,13 @@ RUN R -e "install.packages('shinydashboard')"
 RUN R -e "devtools::install_github('RinteRface/shinydashboardPlus', force = TRUE)"
 RUN R -e "devtools::install_github('andrewsali/shinycssloaders')"
 # copy the app to the image
-RUN mkdir /root/euler
+RUN mkdir /root/app
 #COPY euler /root/euler
-COPY TELLme-vlab-OSMDataFromRelatedConcept root/TELLme-vlab-OSMDataFromRelatedConcept
+#COPY TELLme-vlab-OSMDataFromRelatedConcept root/app
 
 COPY Rprofile.site /usr/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/root/TELLme-vlab-OSMDataFromRelatedConcept')"]
+#CMD ["R", "-e", "shiny::runApp('/root/TELLme-vlab-OSMDataFromRelatedConcept')"]
+CMD ["R", "-e", "shiny::runApp('/root/app')"]
