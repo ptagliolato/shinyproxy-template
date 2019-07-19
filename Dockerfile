@@ -46,7 +46,7 @@ RUN R -e "devtools::install_github('andrewsali/shinycssloaders')"
 # copy the app to the image
 RUN mkdir /root/app
 #COPY euler /root/euler
-#COPY TELLme-vlab-OSMDataFromRelatedConcept root/app
+COPY TELLme-vlab-OSMDataFromRelatedConcept root/app
 
 COPY Rprofile.site /usr/lib/R/etc/
 
