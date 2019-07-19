@@ -1,6 +1,7 @@
 FROM openanalytics/r-base
 
-MAINTAINER Tobias Verbeke "tobias.verbeke@openanalytics.eu"
+#MAINTAINER Tobias Verbeke "tobias.verbeke@openanalytics.eu"
+MAINTAINER ptagliolato
 
 # system libraries of general use
 RUN apt-get update && apt-get install -y \
